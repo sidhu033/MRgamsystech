@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:behavior_overlapTop="@dimen/margin_32dp"
+    tools:context=".activity.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:paddingVertical="@dimen/dp10">
+
+    <LinearLayout
+        android:padding="@dimen/margin_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="-20dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recMenus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

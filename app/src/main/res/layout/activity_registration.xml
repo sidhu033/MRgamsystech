@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Registration">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/regtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="18dp">
+
+
+
+            <ImageView
+                android:id="@+id/regimgview"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/newlogo" />
+
+            <TextView
+                android:id="@+id/regtooltitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/helveticamedium"
+                android:textAlignment="center"
+                android:singleLine="true"
+                android:text="@string/registration"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/regIvcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/call" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <!--Registration scroll-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/regtoolbar">
+        <!--cardview-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            app:cardElevation="5dp"
+            android:layout_below="@+id/regtoolbar"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/llregcat"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/txtcat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/margin_18sp"
+                    android:fontFamily="@font/helveticamedium"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:hint="@string/RegCategory"/>
+
+                    <Spinner
+                        android:id="@+id/regcategory"
+                        android:layout_marginLeft="150dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <!--Name of  Entity-->
+                <RelativeLayout
+                    android:id="@+id/llentity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llregcat"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/entityIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="5dp"
+                        android:src="@drawable/iconperson"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/entityname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/entityIcon"
+                        android:layout_toRightOf="@id/entityIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/gray"
+                        android:hint="@string/Nameoentity"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!--Concern Person-->
+                <RelativeLayout
+                    android:id="@+id/llconperson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llentity"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/envlop"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconbuilding"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/educonperson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/envlop"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/envlop"
+                        android:background="@color/gray"
+                        android:hint="@string/ConernPerson"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!--Mobile Number-->
+                <RelativeLayout
+                    android:id="@+id/llmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llconperson"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/mobile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/smartphone_call"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edumobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/mobile"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/mobile"
+                        android:background="@color/gray"
+                        android:hint="@string/MobNumber"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!--Alternative Mobile Number-->
+                <RelativeLayout
+                    android:id="@+id/llalmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llmobile"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/almobile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/smartphone_call"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edualtmobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/almobile"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/almobile"
+                        android:background="@color/gray"
+                        android:hint="@string/AltNumber"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!--Email Id-->
+                <RelativeLayout
+                    android:id="@+id/llemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llalmobile"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/imvemail"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconmail"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/eduemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/imvemail"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/imvemail"
+                        android:background="@color/gray"
+                        android:hint="@string/Email"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!--City-->
+                <RelativeLayout
+                    android:id="@+id/llcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llemail"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/imvcity"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconbuilding"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/educity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/imvcity"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/imvcity"
+                        android:background="@color/gray"
+                        android:hint="@string/City"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!--Concern Person-->
+                <RelativeLayout
+                    android:id="@+id/llarea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llcity"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/imvarea"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconaread"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/eduarea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/imvarea"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/imvarea"
+                        android:background="@color/gray"
+                        android:hint="@string/Area"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!--Address-->
+                <RelativeLayout
+                    android:id="@+id/lladdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llarea"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/imvaddress"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconbuilding"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/eduaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/imvaddress"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/imvaddress"
+                        android:background="@color/gray"
+                        android:hint="@string/Address"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!--Pincode-->
+                <RelativeLayout
+                    android:id="@+id/llPincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lladdress"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/imvpincode"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/bg"
+                        android:padding="8dp"
+                        android:src="@drawable/iconbuilding"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edupincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/imvpincode"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/imvpincode"
+                        android:background="@color/gray"
+                        android:hint="@string/Pincode"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkterms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPincode"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:buttonTint="#f8a519" />
+
+                <TextView
+                    android:id="@+id/txttermsncond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPincode"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/black"
+                    android:text="@string/t_c" />
+
+                <LinearLayout
+                    android:id="@+id/llbtnreg"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/checkterms">
+
+
+
+                    <Button
+                        android:id="@+id/btnconfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:backgroundTint="#f8a519"
+                        android:padding="5dp"
+                        android:fontFamily="HelveticaNeue"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:text="@string/ConfirmNow"
+                        android:textColor="@color/black" />
+
+                    <Button
+
+                        android:id="@+id/btnconlat"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:backgroundTint="#f8a519"
+                        android:fontFamily="HelveticaNeue"
+                        android:padding="5dp"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:text="@string/ConfirmLater"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+</RelativeLayout>

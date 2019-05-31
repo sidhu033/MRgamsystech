@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FollowUp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/foltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="18dp">
+
+
+
+            <ImageView
+                android:id="@+id/folimgview"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/newlogo" />
+
+            <TextView
+                android:id="@+id/foltooltitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/helveticamedium"
+                android:textAlignment="center"
+                android:singleLine="true"
+                android:text="@string/FollowUp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/regIvcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/call" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!--Follow UP-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="5dp"
+        android:layout_below="@+id/regtoolbar"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Concern Person-->
+            <RelativeLayout
+                android:id="@+id/llwhentomeet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/gray">
+
+                <ImageView
+                    android:id="@+id/imvwtm"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:padding="8dp"
+                    android:src="@drawable/iconwtm"
+                    android:tint="@color/white"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+                <EditText
+                    android:id="@+id/eduwtm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/imvwtm"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/imvwtm"
+                    android:background="@color/gray"
+                    android:hint="@string/Whentofollow"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+            <!--Time To Meet-->
+            <RelativeLayout
+                android:id="@+id/llttm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llwhentomeet"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/gray">
+
+                <ImageView
+                    android:id="@+id/envlop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:padding="8dp"
+                    android:src="@drawable/iconbuilding"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/educonperson"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/envlop"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/envlop"
+                    android:background="@color/gray"
+                    android:hint="@string/TimetoMeet"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+            <!--Time To Meet-->
+            <RelativeLayout
+                android:id="@+id/llremark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llttm"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/gray">
+
+                <ImageView
+                    android:id="@+id/imvttm"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:padding="8dp"
+                    android:src="@drawable/iconremark"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/eduttm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/imvttm"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/imvttm"
+                    android:background="@color/gray"
+                    android:hint="@string/Remark"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <!--Follow Up Methodology-->
+            <RelativeLayout
+                android:id="@+id/llfollowmeth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llremark"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/gray">
+
+                <ImageView
+                    android:id="@+id/imvfum"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:padding="8dp"
+                    android:src="@drawable/iconremark"
+                    android:tint="@color/white" />
+
+                <Spinner
+                    android:id="@+id/spfom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/imvfum"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/imvfum"
+                    android:background="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btnsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/llfollowmeth"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:backgroundTint="#f8a519"
+                android:padding="5dp"
+                android:fontFamily="HelveticaNeue"
+
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginLeft="@dimen/margin_24dp"
+                android:layout_marginRight="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:text="@string/Submit"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

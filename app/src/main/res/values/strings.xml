@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">MRGamsys</string>
+
+    <string name="Close" />
+    <string name="Open" />
+    <string name="username">Username</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="uploaddoc">UPLOAD DOCUMENTS</string>
+
+    <!--Registration Hints-->
+    <string name="Nameoentity">Select Name Of Entity</string>
+    <string name="ConernPerson">Concern Person</string>
+    <string name="MobNumber">Mobile Number</string>
+    <string name="AltNumber">Alternative Number</string>
+    <string name="Email">Email</string>
+    <string name="City">City</string>
+    <string name="Area">Area</string>
+    <string name="Address">Address</string>
+    <string name="Pincode">Pincode</string>
+    <string name="RegCategory">Registration Category :</string>
+    <string name="t_c">I agree to Terms and Conditions.</string>
+
+    <string name="ConfirmNow">CONFIRM NOW</string>
+    <string name="FollowUp">FOLLOW UP</string>
+    <string name="FollowUpdta">FOLLOW UP DETAILS</string>
+    <string name="ConfirmLater">CONFIRM LATER</string>
+    <string name="LogIn">LOGIN</string>
+    <string name="Login">Log in</string>
+
+    <!--Follow Up -->
+    <string name="Whentofollow">When To Follow</string>
+    <string name="TimetoMeet">Time To Meet</string>
+    <string name="Remark">Remark</string>
+    <string name="Submit">SUBMIT</string>
+
+
+    <!--Login -->
+    <string name="logusername">Enter Username</string>
+    <string name="logPassword"> Enter Password</string>
+    <string name="Signin">Sign in</string>
+    <string name="ForgotPass">Forget Password ?</string>
+
+    <!--Confirm Now -->
+    <string name="speciality">Speciality</string>
+    <string name="drreg">Doctor Registration Number</string>
+    <string name="degree">Degree</string>
+    <string name="services">Services</string>
+    <string name="fess">Fees</string>
+    <string name="Photo">Photo</string>
+    <string name="foct">Free of cost Treatments / Services</string>
+    <string name="Yoe">Years Of Experience</string>
+    <string name="focs">Free Of Cost Treatments/Services</string>
+    <string name="submit">Submit</string>
+
+    <!--Upload documents -->
+    <string name="txttempud">We can send agreement copy to doctor
+                            for reference and
+                            he can signed it digitally by
+                            doctor and send it back.
+                            agreement copy can email also.
+                            Doctor can send agreement
+                            document by Login section also.
+    </string>
+
+    <!--Registration Category-->
+
+    <string-array name="regcategory">
+        <item name="Doctor"> Doctor</item>
+        <item name="GYM">GYM </item>
+        <item name="WellnessCenter">Wellness Center </item>
+        <item name="EECP">EECP Center </item>
+        <item name="Others"> Others</item>
+    </string-array>
+
+
+    <!--Degree -->
+    <string-array name="degree">
+        <item name="MBBS"> MBBS</item>
+        <item name="BAMS">BAMS </item>
+        <item name="BDS">BDS  </item>
+        <item name="BUMS">BUMS  </item>
+        <item name="BHMS">BHMS  </item>
+        <item name="Others"> Others</item>
+    </string-array>
+
+
+    <!--Degree -->
+
+    <string-array name="fomethod">
+        <item name="what"> Whatapp</item>
+        <item name="sms">SMS </item>
+        <item name="email">Email  </item>
+        <item name="Others"> Others</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>
